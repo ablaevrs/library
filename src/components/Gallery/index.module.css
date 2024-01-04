@@ -1,53 +1,28 @@
-.rootInternal {
-    width: 600px;
-    height: 400px;
+.root {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
 }
 
 .image {
-    width: 100%;
+    width: 600px;
     height: 400px;
-    object-fit: cover;
 }
 
-.prevArrowInternal, .nextArrowInternal {
+.prevArrow, .nextArrow {
     width: 40px;
     height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     background: rgb(255, 255, 255, 0.7);
     position: absolute;
     top: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.prevArrowInternal {
+.prevArrow {
     left: 16px;
 }
 
-.nextArrowInternal {
+.nextArrow {
     right: 16px;
 }
-
-.prevArrowExternal, .nextArrowExternal {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: rgb(255, 255, 255, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.prevArrowExternal {
-    margin-right: 16px;
-}
-
-.nextArrowExternal {
-    margin-left: 16px;
-}
-
