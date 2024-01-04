@@ -26,3 +26,23 @@
 .nextArrow {
     right: 16px;
 }
+
+.prevArrowVertical, .nextArrowVertical {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgb(255, 255, 255, 0.7);
+    position: absolute;
+    left: 50%;
+}
+
+.prevArrowVertical {
+    top: 16px;
+}
+
+.nextArrowVertical {
+    bottom: 16px;
+}

@@ -14,6 +14,7 @@ function App() {
     <div className="App">
         <Gallery 
           images={images}
+          vertical={true}
         />
     </div>
   );
