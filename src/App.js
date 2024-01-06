@@ -17,6 +17,8 @@ function App() {
           images={images}
           infinity={false}
           vertical={false}
+          width={800}
+          height={400}
         />
     </div>
   );
