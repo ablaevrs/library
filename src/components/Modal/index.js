@@ -4,22 +4,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 export default function Modal({ 
-    visible, 
-    setVisible, 
-    modalTitle, 
-    modalText, 
-    onCancel, 
-    onSuccess, 
-    isCloseIcon, 
-    isFooter, 
-    isCancelButton, 
-    isImage, 
-    onSuccessButtonLabel, 
-    onCancelButtonLabel, 
-    image, 
-    cancelButtonStyle,
-    successButtonStyle,
-    headerStyle
+    visible = false,                // boolean
+    setVisible,         
+    modalTitle='Modal',             // string, title of modal window
+    modalContent,                   // function, return modal content part
+    onCancel,                       // function
+    onSuccess,                      // function 
+    isCloseIcon=true,               // boolean show/hidden close icon
+    isFooter=true,                  // boolean, show footer, that contain Cancel and Save buttons 
+    isCancelButton=true,            // boolean, show/hidden Cancel button 
+    isImage=false,                  // boolean, show/hidden image 
+    onSuccessButtonLabel='Save',    // string, label for Success button (ex, Save, Ok, Done etc) 
+    onCancelButtonLabel='Cancel',   // string, label for Cancel button
+    image,                          // string, path for image    
+    cancelButtonStyle,              // object, style for Cancel button
+    successButtonStyle,             // object, style for Success button
+    titleStyle                      // object, style for title of modal
 }) {
   if (!visible) return null
 
@@ -28,14 +28,14 @@ export default function Modal({
         <div className={s.modal}>
             {
                 isImage && (
-                    <img className={s.img} src={ image } />
+                    <img className={s.img} src={ image } alt='' />
                 )
             }
             
             <div className={s.modalContent}>
                 <div className={s.headerAndBody}>
                     <div className={s.modalHeader}>
-                        <div className={s.header} style={headerStyle}>
+                        <div className={s.header} style={titleStyle}>
                             { modalTitle }
                         </div>
                         {
@@ -47,7 +47,7 @@ export default function Modal({
                         }
                     </div>
                     <div className={s.modalBody}>
-                        { modalText() }
+                        { modalContent() }
                     </div>
                 </div>
                 {
