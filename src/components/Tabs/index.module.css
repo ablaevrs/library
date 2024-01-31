@@ -4,8 +4,7 @@
 }
 
 .content {
-    width: 600px;
-    height: 400px;
+    width: 100%;
     background: rgb(188, 245, 255);
     padding: 16px;
     font-size: 14px;

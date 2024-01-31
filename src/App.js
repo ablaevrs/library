@@ -38,6 +38,12 @@ function App() {
     }
   }
 
+  const tabStyle = {
+    background: 'green'
+  }
+  const activeTabStyle = {}
+  const contentStyle = {}
+
   return (
     <div className="App">
       <Tabs 
@@ -46,6 +52,9 @@ function App() {
         tab={tab}
         setTab={setTab}
         vertical={false}
+        tabStyle={tabStyle}
+        activeTabStyle={activeTabStyle}
+        contentStyle={contentStyle}
       />
     </div>
   );

@@ -7,7 +7,10 @@ export default function Tabs({
     renderTabContent, 
     tab, 
     setTab,
-    vertical=false 
+    vertical=false,
+    tabStyle={},
+    activeTabStyle={},
+    contentStyle={}
 }) {
 
     const template = vertical ? {
@@ -39,13 +42,15 @@ export default function Tabs({
                             setTab={setTab} 
                             active={tab===item.value}
                             vertical={vertical}
+                            tabStyle={tabStyle}
+                            activeTabStyle={activeTabStyle}
                         />
                     )
                 })
             }
             
         </div>
-        <div className={s.content}>
+        <div className={s.content} style={contentStyle}>
             {
                 renderTabContent()
             }
